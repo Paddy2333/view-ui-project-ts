@@ -1,0 +1,1 @@
+import{d as n,r as l,c as a,v as o}from"./index.69e95280.js";const r="_container_5qpdk_1";var s={container:r},i=n({setup(){const e=l("Hello View UI Plus!");return()=>a("div",{class:s.container},[a(o.exports.Alert,{"show-icon":!0},{default:()=>[e.value]}),a(o.exports.Input,{modelValue:e.value,"onUpdate:modelValue":t=>e.value=t},null)])}});export{i as default};
