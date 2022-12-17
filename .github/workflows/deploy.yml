@@ -1,0 +1,43 @@
+on:
+
+  push:
+
+    branches:
+
+      - blog-source
+
+  pull_request:
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    concurrency:
+
+      group: ${{ github.workflow }}-${{ github.ref }}
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Install and Build
+
+        run: |
+
+          npm install
+
+          npm run build
+
+      - name: Deploy
+
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+
+        with:
+
+          branch: master
+
+          folder: public
+
+          single-commit: true
