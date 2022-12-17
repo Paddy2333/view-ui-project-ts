@@ -20,5 +20,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages
-          folder: public
+          folder: dist
           single-commit: true
